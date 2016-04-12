@@ -1,0 +1,5 @@
+DEBUG : com.brandy.log.HelloWorldLogger : Hello World!  It's about: 18:41:39.464
+INFO : com.brandy.log.HelloWorldLogger : Hello World, A Few Moments Later...18:41:40.527
+WARN : com.brandy.log.HelloWorldLogger : Hello World, Don't Panic 18:41:40.536
+ERROR : com.brandy.log.HelloWorldLogger : Hello World, it's time to worry 18:41:40.541
+FATAL : com.brandy.log.HelloWorldLogger : Goodbye World 18:41:40.546

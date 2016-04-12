@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c - %m%n" />
+		</layout>
+	</appender>
+	<appender name="LogQueueAppender" class="com.brandy.log.LogQueueAppender">
+		<param name="url" value="tcp://localhost:61616"/>
+		<param name="Threshold" value="DEBUG"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c - %m%n" />
+		</layout>
+	</appender>
+	 <category name="log4j.logger.org.apache.activemq">
+       <!--   <priority value="off"/>-->
+        <appender-ref ref="ConsoleAppender"/>
+    </category>
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="ConsoleAppender" />
+		<appender-ref ref="LogQueueAppender" />
+	</root>
+</log4j:configuration>
